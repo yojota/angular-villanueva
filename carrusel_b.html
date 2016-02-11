@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="../estils.css" />
+<title>Carrusel B</title>
+
+    <link href="css/carrusel_b.css" rel="stylesheet" type="text/css" />
+    <script src="js/carrusel_b.js"></script>
+
+    <script>
+      function principal() { // onload body
+        new CarruselB({
+          id: "carrusel_b",
+          waiting: 7000, // milliseconds (false per desactivar)
+        });
+      }
+    </script>
+
+</head>
+<body onload="principal()">
+    <div id="carrusel_b">
+        <ul class="photos_b">
+            <li><img id="foto1" src="imgs/delfines.jpg" width="800" height="600"/></li>
+            <li><img id="foto2" src="imgs/albatros.jpg" width="800" height="600"/></li>
+            <li><img id="foto3" src="imgs/halcon.jpg" width="800" height="600"/></li>
+        </ul>
+        <ul class="links_b">
+            <li><a href="#foto1">Delfines</a></li>
+            <li><a href="#foto2">Albatros</a></li>
+            <li><a href="#foto3">Halcón</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
