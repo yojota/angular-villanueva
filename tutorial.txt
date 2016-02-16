@@ -3,3 +3,6 @@ tutorial
 http://cursoangularjs.es/doku.php?id=unidades:02_angular:01_primera_app  --> actual
 
 Hay que buscar de bootstrap
+
+
+http://www.html5rocks.com/es/tutorials/file/filesystem/  ---> file API de html5

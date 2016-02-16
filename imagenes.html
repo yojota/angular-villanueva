@@ -110,10 +110,10 @@
             function handleFileSelect(evt) {
             var files = evt.target.files; // FileList object
 
-          // Loop through the FileList and render image files as thumbnails.
-          for (var i = 0, f; f = files[i]; i++) {
+            // Loop through the FileList and render image files as thumbnails.
+            for (var i = 0, f; f = files[i]; i++) {
 
-          // Only process image files.
+            // Only process image files.
             if (!f.type.match('image.*')) {
               continue;
             }
@@ -137,15 +137,53 @@
       }
 
   document.getElementById('files').addEventListener('change', handleFileSelect, false);
-</script>
+  </script>
   <input type="submit">
   </form>
           <!-- Subiendo archivos -->
           </div>
       </div>
-      
+      <!-- Listando archivos -->
       <div class="panel panel-default">
          <div class="panel-heading"><i class="fa fa-clock-o"></i> Lista de Archivos</div>
+         <script type="text/javascript">
+          function toArray(list) {
+            return Array.prototype.slice.call(list || [], 0);
+            }
+
+          function listResults(entries) {
+          // Document fragments can improve performance since they're only appended
+          // to the DOM once. Only one browser reflow occurs.
+            var fragment = document.createDocumentFragment();
+            entries.forEach(function(entry, i) {
+              var img = entry.isDirectory ? '<img src="folder-icon.gif">' :
+                                  '<img src="file-icon.gif">';
+              var li = document.createElement('li');
+              li.innerHTML = [img, '<span>', entry.name, '</span>'].join('');
+              fragment.appendChild(li);
+            });
+            document.querySelector('#filelist').appendChild(fragment);
+          }
+
+          function onInitFs(fs) {
+            var dirReader = fs.root.createReader();
+            var entries = [];
+            // Call the reader.readEntries() until no more results are returned.
+            var readEntries = function() {
+              dirReader.readEntries (function(results) {
+                if (!results.length) {
+                  listResults(entries.sort());
+                } 
+                else {
+                  entries = entries.concat(toArray(results));
+                  readEntries();
+                }
+                }, errorHandler);
+            };
+          readEntries(); // Start reading dirs.
+          }
+          onInitFs();
+        </script>
           <div class="panel-body">
 
           </div>
