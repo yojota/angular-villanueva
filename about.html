@@ -76,10 +76,10 @@
          </div>
           <div id="sider-menu" class="panel-body">
              <!-- links -->
-                 <a href="panel.html"><i class="fa fa-home"></i> Panel Principal</a>
-                 <a href="imagenes.html"><i class="fa fa-photo"></i> Imágenes</a>
-                 <a href="videos.html"><i class="fa fa-file-video-o"></i> Videos</a>
-                 <a href="visor.html"><i class="fa fa-film"></i> Visor</a>
+                 <a href="panel.html"><i class="fa fa-home"></i> Home</a>
+                 <a href="imagenes.html"><i class="fa fa-area-chart"></i> Imágenes</a>
+                 <a href="videos.html"><i class="fa fa-users"></i> Videos</a>
+                 <a href="visor.html"><i class="fa fa-users"></i> Visor</a>
                  <a href="about.html"><i class="fa fa-code"></i> Acerca de</a>
              <!-- /links -->
           </div>
@@ -92,97 +92,72 @@
    <div class="col-md-9">
     <!-- panel -->
         <div class="panel panel-default">
-         <div class="panel-heading"><i class="fa fa-desktop"></i> Escritorio</div>
+         <div class="panel-heading">
+           <i class="fa fa-code"></i> Acerca de 
+         </div>
           <div class="panel-body">
-       
+           <!-- other code -->
+             
+        <div class="col-sm-12">
+          <img class="src-image" src="images/jessusherrera.jpg"/>
+            <div class="card">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="content">
+                    <p>Visor de Contenidos <br>
+                       Desarrollado para VIllanueva e Hijos S.A</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 about-me">
+          <p>El sistema de  <strong>Visor de Contenidos</strong>, es un sistema que permite visualizar en pantalla de forma controlada publicidades en Imagenes y Videos anexando información relevante a cada clientes (Turnos, Hora, Fecha, Clima, etc.)</p>
+
+          <p> Desarrollado por <strong>Juan Francisco Perez</strong> Contacto: yojota@gmail.com. Twitter @yojota</p>
+        </div>
 
 
 
-
-             <!-- Cubes -->
-             <div class="col-md-12 porcent-cubes">
-                 
-                  <!-- cube 1 -->
-                  <div class="col-md-3">
-                       <div class="header header-success">
-                       <i class="fa fa-photo"></i>
-                       </div>
-                       <div class="body">
-                           Subir Imagen.
-                       </div>
-                  </div>
-                  <!-- /cube 1 -->
-
-                  <!-- cube 2 -->
-                  <div class="col-md-3">
-                       <div class="header header-primary">
-                         <i class="fa fa-file-video-o"></i>
-                       </div>
-                       <div class="body">
-                           Subir Video.
-                       </div>
-                  </div>
-                  <!-- /cube 2 -->
-
-                  <!-- cube 3 -->
-                  <div class="col-md-3">
-                       <div class="header header-warning">
-                         <i class="fa fa-music"></i>
-                       </div>
-                       <div class="body">
-                           <a href="#">Subir Música</a>
-                       </div>
-                  </div>
-                  <!-- /cube 3 -->
-
-                  <!-- cube 4 -->
-                  <div class="col-md-3">
-                       <div class="header header-danger">
-                         <i class="fa fa-power-off"></i>
-                       </div>
-                       <div class="body">
-                           Cambiar Parametros
-                       </div>
-                  </div>
-                  <!-- /cube 4 -->                  
-
-             </div>
-             <!-- /Cubes -->
-
-             <!-- Charts -->
-             <!-- /Charts -->
-
-
-
+           <!-- other code -->
           </div>
         </div>
      <!-- /panel -->
-      <div class="panel panel-default">
-         <div class="panel-heading"><i class="fa fa-lock"></i> Ultimas Actividades</div>
-          <div class="panel-body">
-          </div>
-      </div>
-      
-      <div class="panel panel-default">
-         <div class="panel-heading"><i class="fa fa-clock-o"></i> Fecha y Hora</div>
-          <div class="panel-body">
-
-          </div>
-        </div>
-      </div>
    </div>
    <!-- controls -->
+
+<!-- modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">
+          <i class="fa fa-user-plus"></i>
+          Create New User
+        </h4>
+      </div>
+      <div class="modal-body">
+        <label>Name</label>
+        <input type="text" class="form-control" >
+        <label>Email</label>
+        <input type="text" class="form-control" >
+        <label>User</label>
+        <input type="text" class="form-control" >
+        <label>Password</label>
+        <input type="password" class="form-control" >                        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /modal -->
+
 
 </div>
 </div>
 <!-- /body -->
 
-<footer>
-  <div class="container">
-    <p>Ing. Juan Francisco Perez</p>
-    <p>Información de Contacto: <a href="mailto:yojota@gmail.com">yojota@gmail.com</a>.</p>
-  </div>
-</footer> 
 
 
 
