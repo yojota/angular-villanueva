@@ -32,6 +32,6 @@ app.controller("SeguroController",['$scope','$log','$http',function($scope,$log,
   }).success(function(data, status, headers, config) {
       $scope.seguro=data;
   }).error(function(data, status, headers, config) {
-      alert("Ha fallado la petición. Estado HTTP:"+status);
+      alert("Ha fallado la petición. Estado HTTP:"+status+headers);
   });
 }]);
